@@ -19,4 +19,5 @@ The data used in this project, including COVID-19 mortality records in Chile fro
 
 Special thanks to Pamela Suarez for creating and curating the dataset. I acknowledge and appreciate her work in making this information publicly accessible.
 <br>
+<br>
 I acknowledge and thank the Ministerio de salud and related governmental agencies for making this data publicly available.

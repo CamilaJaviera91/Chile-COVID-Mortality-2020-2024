@@ -4,7 +4,7 @@
 <br>
 This project focuses on analyzing **COVID-19** mortality data in **Chile** from **2020 to 2024**. With at least 60,000 records, the dataset provides critical insights into the impact of the pandemic on the population. 
 <br>
-The project leverages **Python** for data processing and analysis, Google Sheets for collaborative data exploration, and GitHub for version control and transparency.
+The project leverages **Python** for data processing and analysis and **Google Sheets** for collaborative data exploration.
 
 ## 🎯 Key objectives
 

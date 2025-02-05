@@ -47,6 +47,17 @@ The project leverages **Python** for data processing and analysis and **Google S
 | 26 | GLOSA_SUBCATEGORIA_DIAG2 | Gloss of the category code of the cause of death according to ICD-10 | Text | N/A |
 | 27 | LUGAR_DEFUNCION | Describes the place where the death occurs | Text | N/A |
 
+## ✨🗄️✨ Clean Data Dictionary 
+
+| Nº | Variable Name | Description                                     | Data Type | Values                        |
+|---|-------------------------|---------------------------------------------------|-----------|-------------------------------|
+| 1 | AÑO | Year of the death date | Number | N/A |
+| 2 | FECHA_DEF | Date of the death date | Date | N/A |
+| 3 | SEXO_NOMBRE | Gloss identifying biological sex | Number | N/A |
+| 4 | EDAD_CANT | Numerical record of the patient's age at admission| Number | N/A |
+| 5 | COMUNA | Gloss of the commune of residence of the deceased, according to the political-administrative division updated in 2019 | Text | N/A |
+| 6 | NOMBRE_REGION | Gloss of the region of residence| Text | N/A |
+| 7 | LUGAR_DEFUNCION | Describes the place where the death occurs | Text | N/A |
 
 <br>
 

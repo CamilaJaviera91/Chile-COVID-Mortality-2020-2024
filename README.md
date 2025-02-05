@@ -19,7 +19,8 @@ The project leverages **Python** for data processing and analysis and **Google S
 
 | Nº | Variable Name | Description                                     | Data Type | Values                        |
 |---|-------------------------|---------------------------------------------------|-----------|-------------------------------|
-| 1 | ANO_DEF | Year of the death date | Number | N/A |
+| 1 | AÑO | Year of the death date | Number | N/A |
+| 1 | FECHA_DEF | Date of the death date | Date | N/A |
 | 2 | SEXO | Gloss identifying biological sex | Number | 1: Male, 2: Female, 9: Other |
 | 3 | EDAD_TIPO | Unit of age measurement | Number | 1: Years, 2: Months, 3: Days |
 | 4 | EDAD_CANT | Numerical record of the patient's age at admission| Number | N/A |

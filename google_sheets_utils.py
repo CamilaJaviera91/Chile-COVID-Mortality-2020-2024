@@ -68,7 +68,7 @@ def sheets_to_dataframe():
     except NameError as e:
         print(e)
 
-    return data_frame
+    return dfe
 
 #create a googlesheet from a .csv file
 def csv_to_sheets():

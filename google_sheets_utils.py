@@ -74,7 +74,7 @@ def sheets_to_dataframe():
 def csv_to_sheets():
     
     # Read the .csv file
-    df = pd.read_csv(FOLDER + 'COVID.csv')
+    df = pd.read_csv(FOLDER + 'COVID_CLEAN.csv')
     # print(df)
     try:
         service = build('sheets', 'v4', credentials=creds)
@@ -88,7 +88,7 @@ def csv_to_sheets():
         # Write data to the spreadsheet
         result = service.spreadsheets().values().update(
             spreadsheetId=SPREADSHEET_ID,
-            range='COVID!A1',  # Modify this based on where you want to insert the data
+            range='COVID_CLEAN!A1',  # Modify this based on where you want to insert the data
             valueInputOption='USER_ENTERED',
             body=body
         ).execute()

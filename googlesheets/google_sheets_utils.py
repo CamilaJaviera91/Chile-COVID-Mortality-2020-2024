@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 plt.style.use("default")
 
 # Define the folder where the database files are stored
-FOLDER = './database/'
+FOLDER = './googlesheets/database/'
 
 # Spreadsheet ID for the Google Sheets file
 # This ID is obtained from the URL of the Google Sheet

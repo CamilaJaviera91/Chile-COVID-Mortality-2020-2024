@@ -31,17 +31,13 @@ columns_to_remove = [
 df.drop(columns=columns_to_remove, inplace=True)
 
 # Step 4: Convert the 'date' column to datetime format
-df['date'] = pd.to_datetime(df['date'])
+df['FECHA_DEF'] = pd.to_datetime(df['FECHA_DEF'])
 
 # Extract the period (month and year) from the date
-df['period'] = df['date'].dt.to_period('M')
+df['PERIODO'] = df['FECHA_DEF'].dt.to_period('M')
 
 # Step 5: Save the modified DataFrame to a new CSV file in the specified folder
 FOLDER = './googlesheets/database/' # Define the folder path where the CSV file will be saved
-
-# Check if the directory exists, create it if it doesn't
-if not os.path.exists(FOLDER):
-    os.makedirs(FOLDER)
 
 output_file_path = FOLDER + 'COVID_CLEAN.csv'  # Full path to the output CSV file
 df.to_csv(output_file_path, index=False)  # Save the DataFrame to a CSV file without including the index

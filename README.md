@@ -61,10 +61,12 @@ The project leverages **Python** for data processing and analysis and **Google S
 
 <br>
 
+## 🔗 Links
+
+- [Googlesheets Database](https://docs.google.com/spreadsheets/d/1Q0p_w4YwXYZFqseHEhs8AH_UoJY4ll8Vl4iryrIbMo8/edit?gid=1155343400#gid=1155343400)
+
 ## 🎖️ Acknowledgment
 The data used in this project, including COVID-19 mortality records in Chile from 2020 to 2024, is provided by the Chilean government’s open data platform:
-
-<br>
 
 - [Defunciones por COVID19](https://datos.gob.cl/dataset/defunciones-por-covid19)
 

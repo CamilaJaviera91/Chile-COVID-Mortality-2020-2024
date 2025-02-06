@@ -29,15 +29,21 @@ columns_to_remove = [
 # The `inplace=True` parameter modifies the DataFrame directly without creating a copy
 df.drop(columns=columns_to_remove, inplace=True)
 
-# Step 4: Save the modified DataFrame to a new CSV file in the specified folder
+# Step 4: Convert the 'date' column to datetime format
+df['date'] = pd.to_datetime(df['date'])
+
+# Extract the period (month and year) from the date
+df['period'] = df['date'].dt.to_period('M')
+
+# Step 5: Save the modified DataFrame to a new CSV file in the specified folder
 folder = './database/'  # Define the folder path where the CSV file will be saved
 output_file_path = folder + 'COVID_CLEAN.csv'  # Full path to the output CSV file
 df.to_csv(output_file_path, index=False)  # Save the DataFrame to a CSV file without including the index
 
-# Step 5: Read the newly created CSV file back into a Pandas DataFrame
+# Step 6: Read the newly created CSV file back into a Pandas DataFrame
 # This step is optional but ensures the file was saved correctly and can be reloaded
 file_path = folder + 'COVID_CLEAN.csv'  # Path to the saved CSV file
 df = pd.read_csv(file_path)  # Reload the CSV file into a DataFrame for further processing or validation
 
-# Step 6: Upload the cleaned CSV file to Google Sheets
+# Step 7: Upload the cleaned CSV file to Google Sheets
 cs()  # Uses the custom `csv_to_sheets` function to upload the CSV file to Google Sheets

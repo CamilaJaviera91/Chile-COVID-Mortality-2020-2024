@@ -2,6 +2,7 @@
 import pandas as pd  # For data manipulation and handling
 import matplotlib.pyplot as plt  # For plotting and visualizations
 import warnings  # To handle and suppress warnings
+import os
 
 # Import custom functions from google_sheets_utils
 from google_sheets_utils import sheets_to_dataframe as sd  # Function to extract Google Sheets data as a DataFrame
@@ -36,13 +37,18 @@ df['date'] = pd.to_datetime(df['date'])
 df['period'] = df['date'].dt.to_period('M')
 
 # Step 5: Save the modified DataFrame to a new CSV file in the specified folder
-folder = './database/'  # Define the folder path where the CSV file will be saved
-output_file_path = folder + 'COVID_CLEAN.csv'  # Full path to the output CSV file
+FOLDER = './googlesheets/database/' # Define the folder path where the CSV file will be saved
+
+# Check if the directory exists, create it if it doesn't
+if not os.path.exists(FOLDER):
+    os.makedirs(FOLDER)
+
+output_file_path = FOLDER + 'COVID_CLEAN.csv'  # Full path to the output CSV file
 df.to_csv(output_file_path, index=False)  # Save the DataFrame to a CSV file without including the index
 
 # Step 6: Read the newly created CSV file back into a Pandas DataFrame
 # This step is optional but ensures the file was saved correctly and can be reloaded
-file_path = folder + 'COVID_CLEAN.csv'  # Path to the saved CSV file
+file_path = FOLDER + 'COVID_CLEAN.csv'  # Path to the saved CSV file
 df = pd.read_csv(file_path)  # Reload the CSV file into a DataFrame for further processing or validation
 
 # Step 7: Upload the cleaned CSV file to Google Sheets

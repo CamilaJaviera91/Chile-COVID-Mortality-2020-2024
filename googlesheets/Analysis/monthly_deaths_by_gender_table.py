@@ -35,7 +35,7 @@ pdf.set_font('Arial', size=10)
 # Add the table to the PDF
 # Define the width of each column (in mm)
 col_widths = [40, 80, 40]  # Adjusted column widths for better alignment
-header = ['PERIODO', 'GENERO', 'MUERTES']  # Define the table headers
+header = ['PERIOD', 'GENDER', 'DEATHS']  # Define the table headers
 
 # Center the table horizontally
 # Calculate the total table width and the starting X position

@@ -61,6 +61,22 @@ The project leverages **Python** for data processing and analysis and **Google S
 
 <br>
 
+## 📊 Charts
+
+![charts1](./googlesheets/images/pic3.png)
+
+<br>
+
+![charts2](./googlesheets/images/pic4.png)
+
+## 📝 Download PDF
+
+![download1](./googlesheets/images/pic1.png)
+
+<br>
+
+![download2](./googlesheets/images/pic2.png)
+
 ## 🔗 Links
 
 - [Googlesheets Database](https://docs.google.com/spreadsheets/d/1Q0p_w4YwXYZFqseHEhs8AH_UoJY4ll8Vl4iryrIbMo8/edit?gid=1155343400#gid=1155343400)

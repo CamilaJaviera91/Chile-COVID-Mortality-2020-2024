@@ -7,21 +7,21 @@ import seaborn as sns  # For creating attractive and informative statistical plo
 # Replace './googlesheets/database/COVID_CLEAN.csv' with the path to your dataset
 df = pd.read_csv('./googlesheets/database/COVID_CLEAN.csv')
 
-# Group the data by 'PERIODO' (period) and 'SEXO_NOMBRE' (gender), 
+# Group the data by 'AÑO' (year) and 'NOMBRE_REGION' (region)
 # Use the size() function to count the number of rows (records) in each group
 # Reset the index to turn the grouped DataFrame into a regular DataFrame
 # Rename the count column as 'MUERTES' (deaths)
-df_count = df.groupby(['PERIODO', 'SEXO_NOMBRE']).size().reset_index(name='MUERTES')
+df_count = df.groupby(['AÑO', 'NOMBRE_REGION']).size().reset_index(name='MUERTES')
 
-# Set the figure size for the plot
-plt.figure(figsize=(10,6))
+# Set the figure size for the plot to make it visually appealing and clear
+plt.figure(figsize=(10, 6))
 
 # Create a bar plot using seaborn
 # 'data=df_count' specifies the DataFrame to use for the plot
-# 'x' is the column representing the period (PERIODO), which will appear on the x-axis
+# 'x' is the column representing the year (AÑO), which will appear on the x-axis
 # 'y' is the column representing the number of deaths (MUERTES), which will appear on the y-axis
-# 'hue' differentiates the data by gender (SEXO_NOMBRE), creating separate bars for each gender
-sns.barplot(data=df_count, x='PERIODO', y='MUERTES', hue='SEXO_NOMBRE')
+# 'hue' differentiates the data by region (NOMBRE_REGION), creating separate bars for each region within the same year
+sns.barplot(data=df_count, x='AÑO', y='MUERTES', hue='NOMBRE_REGION')
 
 # Add annotations to show the numbers on top of the bars
 # Loop through each bar and add its value
@@ -29,10 +29,10 @@ for container in plt.gca().containers:  # Get all the bars in the current plot
     plt.gca().bar_label(container, fmt='%d')  # Format numbers as integers
 
 # Add a descriptive title to the plot to indicate what the graph represents
-plt.title('Monthly Deaths by Gender')
+plt.title('Yearly Deaths by Region')
 
-# Label the x-axis to indicate it represents the period
-plt.xlabel('Period')
+# Label the x-axis to indicate it represents the year
+plt.xlabel('Year')
 
 # Label the y-axis to indicate it represents the number of deaths
 plt.ylabel('Number of Deaths')

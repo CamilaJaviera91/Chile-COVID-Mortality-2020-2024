@@ -23,6 +23,11 @@ plt.figure(figsize=(10, 6))
 # 'hue' differentiates the data by region (NOMBRE_REGION), creating separate bars for each region within the same year
 sns.barplot(data=df_count, x='AÑO', y='MUERTES', hue='NOMBRE_REGION')
 
+# Add annotations to show the numbers on top of the bars
+# Loop through each bar and add its value
+for container in plt.gca().containers:  # Get all the bars in the current plot
+    plt.gca().bar_label(container, fmt='%d')  # Format numbers as integers
+
 # Add a descriptive title to the plot to indicate what the graph represents
 plt.title('Yearly Deaths by Region')
 

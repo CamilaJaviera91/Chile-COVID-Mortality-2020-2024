@@ -62,11 +62,12 @@ The project leverages **Python** for data processing and analysis and **Google S
 <br>
 
 ## 📊 Charts
-
+### Month Deaths By Gender
 ![charts1](./googlesheets/images/pic3.png)
 
 <br>
 
+## Yearly Deaths By Region
 ![charts2](./googlesheets/images/pic4.png)
 
 ## 📝 Download PDF

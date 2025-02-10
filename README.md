@@ -4,9 +4,18 @@
 
 This project focuses on analyzing **COVID-19** mortality data in **Chile** from **2020 to 2024**. With at least 60,000 records, the dataset provides critical insights into the impact of the pandemic on the population.  
 
+<br>
+
+This **project** will be divided into two parts:
+
+- First, I will work with **Google Sheets.**
+- Later, I will work with **PostgreSQL.**
+
+With this, I will demonstrate that it is possible to achieve the **same results** using **different tools.**
+
 ---
 
-# 📋 GoogleSheets
+# 📋 Google Sheets
 
 The project leverages **Python** for data processing and analysis and **Google Sheets** for collaborative data exploration.
 

@@ -61,9 +61,6 @@ The project leverages **Python** for data processing and analysis and **Google S
 | 8 | PERIODO | Period of the death date | Date | N/A |
 | 9 | RANGO_ETARIO | Age range of the deceased | Text | N/A |
 
-
-<br>
-
 ## 📊 Charts
 ### Month Deaths By Gender
 ![charts1](./googlesheets/images/pic3.png)

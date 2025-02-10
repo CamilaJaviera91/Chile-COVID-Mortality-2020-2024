@@ -89,7 +89,7 @@ The project leverages **Python** for data processing and analysis and **Google S
 # 🗄️ Postgres
 
 The project leverages **Python** for data processing and analysis and **Postgres** for collaborative data exploration.
---
+
 ## 🎖️ Acknowledgments
 The data used in this project, including COVID-19 mortality records in Chile from 2020 to 2024, is provided by the Chilean government’s open data platform:
 

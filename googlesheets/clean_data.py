@@ -40,6 +40,20 @@ df['FECHA_DEF'] = pd.to_datetime(df['FECHA_DEF'])
 # This step creates a new column 'PERIODO' that represents the month and year of each entry
 df['PERIODO'] = df['FECHA_DEF'].dt.to_period('M')
 
+# Step 4.1: Create an age range based on EDAD_CANT
+# Define the age range limits
+bins = [0, 12, 18, 30, 45, 60, 75, 90, 130]  # The limits of the ranges (adjust as needed)
+
+# Define the labels for each range
+labels = ['0-12 Años', '13-18 Años', '19-30 Años', '31-45 Años', 
+          '46-60 Años', '61-75 Años', '76-90 Años', '91+ Años']
+
+# Assign EDAD_CANT values to a range using pd.cut
+df['RANGO_ETARIO'] = pd.cut(df['EDAD_CANT'], bins=bins, labels=labels, right=False)
+
+# Verify the result
+print(df[['EDAD_CANT', 'RANGO_ETARIO']].head())
+
 # Step 5: Save the modified DataFrame to a new CSV file in the specified folder
 # Define the folder path where the output CSV file will be saved
 FOLDER = './googlesheets/database/'  

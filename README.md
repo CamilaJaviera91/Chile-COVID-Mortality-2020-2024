@@ -58,6 +58,9 @@ The project leverages **Python** for data processing and analysis and **Google S
 | 5 | COMUNA | Gloss of the commune of residence of the deceased, according to the political-administrative division updated in 2019 | Text | N/A |
 | 6 | NOMBRE_REGION | Gloss of the region of residence| Text | N/A |
 | 7 | LUGAR_DEFUNCION | Describes the place where the death occurs | Text | N/A |
+| 8 | PERIODO | Period of the death date | Date | N/A |
+| 9 | RANGO_ETARIO | Age range of the deceased | Text | N/A |
+
 
 <br>
 

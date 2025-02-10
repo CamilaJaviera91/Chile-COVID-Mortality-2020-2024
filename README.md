@@ -68,6 +68,9 @@ The project leverages **Python** for data processing and analysis and **Google S
 ## Yearly Deaths By Region
 ![charts2](./googlesheets/images/pic4.png)
 
+## Yearly Deaths By Age Range
+![charts2](./googlesheets/images/pic5.png)
+
 ## 📝 Download PDF
 
 ### Month Deaths By Gender

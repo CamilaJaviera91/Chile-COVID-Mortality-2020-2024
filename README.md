@@ -105,7 +105,7 @@ The project leverages **Python** for data processing and analysis and **Postgres
 
 ## 🗄️ Database Schema
 
-## <u>Connection</u>
+## Connection
 
 1. In this case, we are going to use DBeaver, so the first thing we need to do is create a new connection.
 - As shown in the picture, we need to configure the following settings:

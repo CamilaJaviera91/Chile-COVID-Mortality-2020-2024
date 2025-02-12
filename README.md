@@ -110,6 +110,11 @@ Ensure you have the following installed:
 - **PostgreSQL** ([Download](https://www.postgresql.org/download/))  
 - **Python 3.x** ([Download](https://www.python.org/downloads/))  
 - **DBeaver** (optional, for database visualization: [Download](https://dbeaver.io/download/))
+- **Required Python Libraries**:  
+
+```
+  pip install pandas scikit-learn psycopg2 matplotlib seaborn
+```
 
 ## 🗄️ Database Schema
 

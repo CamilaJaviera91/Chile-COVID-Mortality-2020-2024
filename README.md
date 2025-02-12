@@ -128,6 +128,17 @@ The project leverages **Python** for data processing and analysis and **Postgres
 
 ![connection2](./postgres/images/pic3.png)
 
+### `covid_data`
+- **AÑO** (INT)
+- **FECHA_DEF** (DATE)
+- **SEXO_NOMBRE** (VARCHAR(10))
+- **EDAD_CANT** (INT)
+- **COMUNA** (VARCHAR(100))
+- **NOMBRE_REGION** (VARCHAR(100))
+- **LUGAR_DEFUNCION** (VARCHAR(100))
+- **PERIODO** (VARCHAR(7))
+- **RANGO_ETARIO** (VARCHAR(20))
+
 ---
 
 ## 🎖️ Acknowledgments

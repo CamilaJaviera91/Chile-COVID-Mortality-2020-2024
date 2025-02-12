@@ -141,6 +141,12 @@ The project leverages **Python** for data processing and analysis and **Postgres
 - RANGO_ETARIO (VARCHAR(20)) - Age range of the deceased
 ```
 
+### ✍🏻 Insert Data from Terminal
+
+```
+psql -U postgres -d mi_base_de_datos -h localhost -p 5432 -f /home/usuario/Chile-COVID-Mortality-2020-2024/postgres/tables/add_into_tables.sql
+```
+
 ---
 
 ## 🎖️ Acknowledgments

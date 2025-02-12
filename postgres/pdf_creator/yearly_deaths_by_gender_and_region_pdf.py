@@ -3,7 +3,7 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 from reportlab.lib import colors
 import sys
 sys.path.append('./postgres/queries/')
-from postgres.pdf_creator.yearly_deaths_by_gender_and_region_pdf import yearly_deaths_by_gender_and_region as gr
+from yearly_deaths_by_gender_and_region import yearly_deaths_by_gender_and_region as gr
 
 folder = "./postgres/download/"
 

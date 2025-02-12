@@ -6,8 +6,8 @@ sys.path.append('./postgres/queries/')  # Add the path to the 'queries' folder f
 from connection import connection
 
 # Import necessary libraries
-import psycopg2  # Library for connecting to and interacting with PostgreSQL databases
-import locale    # Library for setting the locale to control date, time, and number formatting
+import psycopg2      # Library for connecting to and interacting with PostgreSQL databases
+import locale        # Library for setting the locale to control date, time, and number formatting
 import pandas as pd  # Library for working with structured data, like DataFrames, in Python
 
 def yearly_deaths_by_gender_and_region():

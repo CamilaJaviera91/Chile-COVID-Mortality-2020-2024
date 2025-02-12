@@ -103,6 +103,13 @@ The project leverages **Python** for data processing and analysis and **Google S
 
 The project leverages **Python** for data processing and analysis and **Postgres** for collaborative data exploration.
 
+## 🚀 Installation & Setup  
+
+### Prerequisites  
+Ensure you have the following installed:  
+- **PostgreSQL** ([Download](https://www.postgresql.org/download/))  
+- **Python 3.x** ([Download](https://www.python.org/downloads/))  
+
 ## 🗄️ Database Schema
 
 ## Connection

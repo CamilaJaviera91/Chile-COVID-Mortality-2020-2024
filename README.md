@@ -162,7 +162,7 @@ Ensure you have the following installed:
 psql -U postgres -d mi_base_de_datos -h localhost -p 5432 -f /home/usuario/Chile-COVID-Mortality-2020-2024/postgres/tables/add_into_tables.sql
 ```
 
-## 🛠️ Example Query for Recommendations
+## 🛠️ Example of a Query
 
 ```
 select 

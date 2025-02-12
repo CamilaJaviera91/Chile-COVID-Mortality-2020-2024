@@ -129,15 +129,15 @@ The project leverages **Python** for data processing and analysis and **Postgres
 ![connection2](./postgres/images/pic3.png)
 
 ### `covid_data`
-- **AÑO** (INT)
-- **FECHA_DEF** (DATE)
-- **SEXO_NOMBRE** (VARCHAR(10))
-- **EDAD_CANT** (INT)
-- **COMUNA** (VARCHAR(100))
-- **NOMBRE_REGION** (VARCHAR(100))
-- **LUGAR_DEFUNCION** (VARCHAR(100))
-- **PERIODO** (VARCHAR(7))
-- **RANGO_ETARIO** (VARCHAR(20))
+- **AÑO** (INT) - Year of the death date | Number
+- **FECHA_DEF** (DATE) - Date of the death date 
+- **SEXO_NOMBRE** (VARCHAR(10)) - Gloss identifying biological sex
+- **EDAD_CANT** (INT) - Numerical record of the patient's age at admission
+- **COMUNA** (VARCHAR(100)) - Gloss of the commune of residence of the deceased, according to the political-administrative division updated in 2019
+- **NOMBRE_REGION** (VARCHAR(100)) - Gloss of the region of residence
+- **LUGAR_DEFUNCION** (VARCHAR(100)) - Describes the place where the death occurs
+- **PERIODO** (VARCHAR(7)) - Period of the death date
+- **RANGO_ETARIO** (VARCHAR(20)) - Age range of the deceased
 
 ---
 

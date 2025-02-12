@@ -103,6 +103,27 @@ The project leverages **Python** for data processing and analysis and **Google S
 
 The project leverages **Python** for data processing and analysis and **Postgres** for collaborative data exploration.
 
+## 🗄️ Database Schema
+
+## <u>Connection</u>
+
+1. In this case, we are going to use DBeaver, so the first thing we need to do is create a new connection.
+- As shown in the picture, we need to configure the following settings:
+    - **<u>Host</u>:** localhost
+    - **<u>Database</u>:** postgres
+    - **<u>Port</u>:** 5432
+    - **<u>Username</u>:** postgres
+    - **<u>Password</u>:** _YOUR PASSWORD_
+<br>
+
+![connection1](./postgres/images/pic1.png)
+
+2. After setting the parameters, we should test the connection to ensure it works before applying the configuration.
+
+<br>
+
+![connection2](./postgres/images/pic2.jpg)
+
 ---
 
 ## 🎖️ Acknowledgments

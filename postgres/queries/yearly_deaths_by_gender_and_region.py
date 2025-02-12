@@ -36,11 +36,11 @@ def yearly_deaths_by_gender_and_region():
         # Execute the SQL query to retrieve yearly deaths grouped by gender and region
         cursor.execute('''
                         SELECT 
-                            cd."AÑO" AS "year",                            -- Year of death
-                            cd."NOMBRE_REGION" AS "region",               -- Name of the region
-                            COUNT(cd."EDAD_CANT") AS "quantity",          -- Total number of deaths
-                            SUM(CASE WHEN cd."SEXO_NOMBRE" = 'Mujer' THEN 1 ELSE 0 END) AS "Women", -- Count of women
-                            SUM(CASE WHEN cd."SEXO_NOMBRE" = 'Hombre' THEN 1 ELSE 0 END) AS "Men"   -- Count of men
+                            cd."AÑO" AS "year",                                                     -- Year of death
+                            cd."NOMBRE_REGION" AS "region",                                         -- Name of the region
+                            COUNT(cd."EDAD_CANT") AS "quantity",                                    -- Total number of deaths
+                            SUM(CASE WHEN cd."SEXO_NOMBRE" = 'Mujer' THEN 1 ELSE 0 END) AS "Women", -- Total number of women
+                            SUM(CASE WHEN cd."SEXO_NOMBRE" = 'Hombre' THEN 1 ELSE 0 END) AS "Men"   -- Total number of men
                         FROM covid_chile.covid_data cd
                         GROUP BY 
                             "year", 

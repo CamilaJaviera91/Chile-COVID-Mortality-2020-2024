@@ -124,6 +124,10 @@ The project leverages **Python** for data processing and analysis and **Postgres
 
 ![connection2](./postgres/images/pic2.jpg)
 
+### 📌 Schema Diagram 
+
+![connection2](./postgres/images/pic3.png)
+
 ---
 
 ## 🎖️ Acknowledgments

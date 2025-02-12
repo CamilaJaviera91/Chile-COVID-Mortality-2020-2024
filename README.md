@@ -162,6 +162,20 @@ Ensure you have the following installed:
 psql -U postgres -d mi_base_de_datos -h localhost -p 5432 -f /home/usuario/Chile-COVID-Mortality-2020-2024/postgres/tables/add_into_tables.sql
 ```
 
+## 🛠 Example Query for Recommendations
+
+```
+select 
+cd."AÑO" as "year",
+cd."NOMBRE_REGION" as "region",
+count(cd."EDAD_CANT") as "quantity",
+sum(case when cd."SEXO_NOMBRE" = 'Mujer' then 1 else 0 end) as "Women",
+sum(case when cd."SEXO_NOMBRE" = 'Hombre' then 1 else 0 end) as "Men"
+from covid_chile.covid_data cd
+group by "year", "region"
+order by "year";
+```
+
 ---
 
 ## 🎖️ Acknowledgments

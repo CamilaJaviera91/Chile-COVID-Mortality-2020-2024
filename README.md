@@ -178,7 +178,7 @@ order by "year";
 
 ## 📊 Data Analysis
 
-### Yearly Deaths by Gender and Region (table)
+### Yearly Deaths by Gender and Region (PDF table)
 
 ![analysis1](./postgres/images/pic4.png)
 

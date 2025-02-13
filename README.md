@@ -182,6 +182,10 @@ order by "year";
 
 ![analysis1](./postgres/images/pic4.png)
 
+### Yearly Deaths by Gender (Graphic)
+
+![analysis2](./postgres/images/pic5.png)
+
 ---
 
 ## 🎖️ Acknowledgments

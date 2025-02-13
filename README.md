@@ -176,6 +176,12 @@ group by "year", "region"
 order by "year";
 ```
 
+## 📊 Data Analysis
+
+### Yearly Deaths by Gender and Region (table)
+
+![analysis1](./postgres/images/pic4.png)
+
 ---
 
 ## 🎖️ Acknowledgments

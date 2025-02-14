@@ -91,7 +91,7 @@ The project leverages **Python** for data processing and analysis and **Google S
 ![download2](./source/googlesheets/images/pic2.png)
 
 ## Yearly Deaths By Age Range
-![download3](./googlesheets/images/pic6.png)
+![download3](./source/googlesheets/images/pic6.png)
 
 ## 🔗 Important Links
 

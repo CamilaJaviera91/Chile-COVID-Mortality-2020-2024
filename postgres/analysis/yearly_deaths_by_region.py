@@ -8,7 +8,7 @@ import numpy as np
 import sys
 
 # Importing the pandas library to work with structured data (DataFrames)
-import pandas as pd  # Make sure pandas is installed in your environment
+import pandas as pd  # Ensure pandas is installed in your environment
 
 # Adding the path to the folder containing the function to be imported
 # This allows importing a custom module from a specific directory
@@ -21,25 +21,31 @@ from yearly_deaths_by_gender_and_region import yearly_deaths_by_gender_and_regio
 # Retrieve the DataFrame containing the yearly deaths data
 df = gr()
 
-# Group the data by year and calculate the sum of deaths for men and women
-# This ensures that duplicate years are combined, summing their respective values
-grouped_df = df.groupby('year', as_index=False).sum()
+# Group the data by year and region, calculating the sum of deaths for men and women
+# This ensures that duplicate years and regions are combined, summing their respective values
+grouped_df = df.groupby(['year', 'region'], as_index=False).agg({
+    'Women': 'sum',  # Sum the number of deaths for women
+    'Men': 'sum'     # Sum the number of deaths for men
+})
 
-# Display the unique years in the grouped DataFrame
-# This step helps verify that the grouping worked as expected
-print(f"Unique years after grouping: {grouped_df['year'].tolist()}")
+# Create a new column to represent the total deaths by region
+grouped_df['Total_Deaths'] = grouped_df['Women'] + grouped_df['Men']
 
-# Extract the 'year', 'Women', and 'Men' columns for plotting
-years = grouped_df['year']  # Years in the dataset
-region = grouped_df['region']  # Total deaths of women per year
+# Extract and display unique region names
+unique_regions = grouped_df['region'].unique()
+print(f"Unique regions: {unique_regions}")
+
+# Extract the 'year', 'region', and 'Total_Deaths' columns for plotting
+years = grouped_df['year']
+regions = grouped_df['region']  # Region names
+total_deaths = grouped_df['Total_Deaths']
 
 # Create a list of indices (integers) corresponding to each year
 # This is used to position the bars on the X-axis
 x = np.arange(len(years))
 
-# Plot the stacked bar chart
-# Plot the bar for women's deaths first
-plt.bar(x, region, label="region", color="salmon")
+# Plot the bar chart showing total deaths by region
+plt.bar(x, total_deaths, label="Total Deaths", color="lightblue")
 
 # Add annotations on top of each bar to show the exact number of deaths
 for container in plt.gca().containers:  # Get all bar containers in the current axis
@@ -55,7 +61,7 @@ plt.title("Yearly Deaths by Region")  # Descriptive title for the visualization
 # Replace the default X-axis ticks with the actual year labels
 plt.xticks(x, years)
 
-# Add a legend to identify the colors used for men and women
+# Add a legend to identify the chart
 plt.legend()
 
 # Adjust the layout to prevent overlapping of elements (e.g., labels, title)

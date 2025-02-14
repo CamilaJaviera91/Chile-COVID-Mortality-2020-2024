@@ -5,7 +5,7 @@ import seaborn as sns  # For creating attractive and informative statistical plo
 
 # Load the dataset from a CSV file into a pandas DataFrame
 # Replace './googlesheets/database/COVID_CLEAN.csv' with the path to your dataset
-df = pd.read_csv('./googlesheets/database/COVID_CLEAN.csv')
+df = pd.read_csv('./source/googlesheets/database/COVID_CLEAN.csv')
 
 # Group the data by 'AÑO' (year) and 'RANGO_ETARIO' (age range)
 # Use the size() function to count the number of rows (records) in each group

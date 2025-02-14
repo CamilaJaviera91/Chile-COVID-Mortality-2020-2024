@@ -197,6 +197,8 @@ The data used in this project, including COVID-19 mortality records in Chile fro
 
 - [Defunciones por COVID19](https://datos.gob.cl/dataset/defunciones-por-covid19)
 
+![acknowledgment1](./source/images/pic1.png)
+
 Special thanks to **Pamela Suarez** ***(deis@minsal.cl)*** for creating and curating the dataset. I acknowledge and appreciate her work in making this information publicly accessible.
 
 <br>

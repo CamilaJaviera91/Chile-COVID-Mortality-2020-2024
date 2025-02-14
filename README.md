@@ -180,15 +180,15 @@ order by "year";
 
 ### Yearly Deaths by Gender and Region (PDF table)
 
-![analysis1](./postgres/images/pic4.png)
+![analysis1](./source/postgres/images/pic4.png)
 
 ### Yearly Deaths by Gender (Graphic)
 
-![analysis2](./postgres/images/pic5.png)
+![analysis2](./source/postgres/images/pic5.png)
 
 ### Yearly Deaths by Region (Graphic)
 
-![analysis3](./postgres/images/pic6.png)
+![analysis3](./source/postgres/images/pic6.png)
 
 ---
 

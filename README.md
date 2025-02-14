@@ -1,17 +1,27 @@
 # 🦠 Chile COVID-19 Mortality Analysis (2020-2024)
 
-### 📃 Description of the Project
+### 📃 Project Description
 
-This project focuses on analyzing **COVID-19** mortality data in **Chile** from **2020 to 2024**. With at least 60,000 records, the dataset provides critical insights into the impact of the pandemic on the population.  
+- **Objective:** 
+    - Analyze COVID-19 mortality data in Chile from 2020 to 2024, providing critical insights into the pandemic's impact on the population. 
 
-<br>
+- **Project Division:**
+  - **First Part:** Work with Google Sheets for initial data exploration and analysis.
+  - **Second Part:** Use PostgreSQL for advanced analysis and data storage.
 
-This **project** will be divided into two parts:
+- **Methodology:**
 
-- First, I will work with **Google Sheets.**
-- Later, I will work with **PostgreSQL.**
+  - **Google Sheets:**
+    - Use Python for data processing and analysis.
+    - Collaboratively explore data using Google Sheets.
 
-With this, I will demonstrate that it is possible to achieve the **same results** using **different tools.**
+  - **PostgreSQL:**
+    - Migrate data to a PostgreSQL database for more detailed analysis and advanced queries.
+
+  - **Key Objectives:**
+    - **Data Cleaning and Organization:** Prepare the mortality dataset for meaningful analysis.
+    - **Exploration of Trends and Patterns:** Investigate mortality rates by region, age, and time.
+    - **Data Visualization:** Create effective visualizations to communicate key findings.
 
 ---
 

@@ -123,7 +123,7 @@ Ensure you have the following installed:
 - **Required Python Libraries**:  
 
 ```
-  pip install pandas scikit-learn psycopg2 matplotlib seaborn
+  pip install pandas scikit-learn psycopg2 matplotlib seaborn numpy reportlab fpdf googleapiclient google
 ```
 
 ## 🗄️ Database Schema

@@ -23,10 +23,7 @@ df = gr()
 
 # Group the data by year and region, calculating the sum of deaths for men and women
 # This ensures that duplicate years and regions are combined, summing their respective values
-grouped_df = df.groupby(['year', 'region'], as_index=False).agg({
-    'Women': 'sum',  # Sum the number of deaths for women
-    'Men': 'sum'     # Sum the number of deaths for men
-})
+grouped_df = df.groupby('year', as_index=False).sum()
 
 # Create a new column to represent the total deaths by region
 grouped_df['Total_Deaths'] = grouped_df['Women'] + grouped_df['Men']

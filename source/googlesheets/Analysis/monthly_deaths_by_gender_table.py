@@ -3,7 +3,7 @@ import pandas as pd # For working with data in DataFrame format.
 import os  # For file and directory operations.
 
 # Load the data from the CSV file
-df = pd.read_csv('./googlesheets/database/COVID_CLEAN.csv')
+df = pd.read_csv('./source/googlesheets/database/COVID_CLEAN.csv')
 
 # Group the data by 'PERIODO' (period) and 'SEXO_NOMBRE' (gender),
 # and count the number of occurrences to calculate the deaths

@@ -8,7 +8,7 @@ import numpy as np
 import sys
 
 # Adding the path to the folder containing the function to be imported
-sys.path.append('./postgres/queries/')
+sys.path.append('./source/postgres/queries/')
 
 # Importing the 'yearly_deaths_by_gender_and_region' function from a custom module
 from yearly_deaths_by_gender_and_region import yearly_deaths_by_gender_and_region as gr

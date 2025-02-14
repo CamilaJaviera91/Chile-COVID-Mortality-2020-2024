@@ -56,7 +56,7 @@ print(df[['EDAD_CANT', 'RANGO_ETARIO']].head())
 
 # Step 5: Save the modified DataFrame to a new CSV file in the specified folder
 # Define the folder path where the output CSV file will be saved
-FOLDER = './googlesheets/database/'  
+FOLDER = './source/googlesheets/database/'  
 
 # Check if the specified folder exists; if not, create it
 if not os.path.exists(FOLDER):

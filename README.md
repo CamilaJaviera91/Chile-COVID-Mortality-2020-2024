@@ -139,7 +139,7 @@ Ensure you have the following installed:
 
 ### 📌 Schema Diagram 
 
-![connection2](./postgres/images/pic3.png)
+![connection2](./source/postgres/images/pic3.png)
 
 ### `covid_data`
 ```

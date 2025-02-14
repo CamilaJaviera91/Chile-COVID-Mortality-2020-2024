@@ -11,58 +11,51 @@ import sys
 import pandas as pd  # Ensure pandas is installed in your environment
 
 # Adding the path to the folder containing the function to be imported
-# This allows importing a custom module from a specific directory
 sys.path.append('./postgres/queries/')
 
 # Importing the 'yearly_deaths_by_gender_and_region' function from a custom module
-# Renaming it as 'gr' for easier use
 from yearly_deaths_by_gender_and_region import yearly_deaths_by_gender_and_region as gr
 
 # Retrieve the DataFrame containing the yearly deaths data
 df = gr()
 
-# Group the data by year and region, calculating the sum of deaths for men and women
-# This ensures that duplicate years and regions are combined, summing their respective values
-grouped_df = df.groupby('year', as_index=False).sum()
+# Group the data by year and region, summing deaths for women and men
+grouped_df = df.groupby(['year', 'region'], as_index=False).agg({
+    'Women': 'sum',
+    'Men': 'sum'
+})
 
-# Create a new column to represent the total deaths by region
+# Create a new column for total deaths by region
 grouped_df['Total_Deaths'] = grouped_df['Women'] + grouped_df['Men']
 
-# Extract and display unique region names
-unique_regions = grouped_df['region'].unique()
-print(f"Unique regions: {unique_regions}")
+# Pivot the table to organize regions as columns
+pivot_df = grouped_df.pivot(index='year', columns='region', values='Total_Deaths').fillna(0)
 
-# Extract the 'year', 'region', and 'Total_Deaths' columns for plotting
-years = grouped_df['year']
-regions = grouped_df['region']  # Region names
-total_deaths = grouped_df['Total_Deaths']
+# Extract unique years and regions for the plot
+years = pivot_df.index
+regions = pivot_df.columns
 
-# Create a list of indices (integers) corresponding to each year
-# This is used to position the bars on the X-axis
-x = np.arange(len(years))
+# Create a stacked bar plot
+x = np.arange(len(years))  # Positions for the X-axis
+width = 0.85  # Width of the bars
 
-# Plot the bar chart showing total deaths by region
-plt.bar(x, total_deaths, label="Total Deaths", color="lightblue")
+# Plot each region as a layer in the stacked bar chart
+bottom_values = np.zeros(len(years))  # Initialize the bottom layer
+for region in regions:
+    plt.bar(x, pivot_df[region], label=region, bottom=bottom_values, width=width)
+    bottom_values += pivot_df[region]  # Update the bottom layer for the next region
 
 # Add annotations on top of each bar to show the exact number of deaths
 for container in plt.gca().containers:  # Get all bar containers in the current axis
     plt.gca().bar_label(container, fmt='%d')  # Add the labels formatted as integers
 
-# Add labels for the X and Y axes
-plt.xlabel("Year")  # Label for the X-axis (years)
-plt.ylabel("Deaths")  # Label for the Y-axis (number of deaths)
+# Add labels, title, and legend
+plt.xlabel("Year")
+plt.ylabel("Total Deaths")
+plt.title("Yearly Deaths by Region")
+plt.xticks(x, years, rotation=45)  # Rotate the years for better visibility
+plt.legend(title="Regions", bbox_to_anchor=(1.05, 1), loc='upper left')  # Place legend outside
 
-# Add a title to the chart
-plt.title("Yearly Deaths by Region")  # Descriptive title for the visualization
-
-# Replace the default X-axis ticks with the actual year labels
-plt.xticks(x, years)
-
-# Add a legend to identify the chart
-plt.legend()
-
-# Adjust the layout to prevent overlapping of elements (e.g., labels, title)
+# Adjust layout and show the chart
 plt.tight_layout()
-
-# Display the final chart
 plt.show()

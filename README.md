@@ -129,7 +129,7 @@ Ensure you have the following installed:
     - **<u>Password</u>:** _YOUR PASSWORD_
 <br>
 
-![connection1](./postgres/images/pic1.png)
+![connection1](./source/postgres/images/pic1.png)
 
 2. After setting the parameters, we should test the connection to ensure it works before applying the configuration.
 

@@ -2,10 +2,10 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 from reportlab.lib import colors
 import sys
-sys.path.append('./postgres/queries/')
+sys.path.append('./source/postgres/queries/')
 from yearly_deaths_by_gender_and_region import yearly_deaths_by_gender_and_region as gr
 
-folder = "./postgres/download/"
+folder = "./source/postgres/download/"
 
 # Get the data
 df = gr()

@@ -18,10 +18,10 @@
   - **PostgreSQL:**
     - Migrate data to a PostgreSQL database for more detailed analysis and advanced queries.
 
-  - **Key Objectives:**
-    - **Data Cleaning and Organization:** Prepare the mortality dataset for meaningful analysis.
-    - **Exploration of Trends and Patterns:** Investigate mortality rates by region, age, and time.
-    - **Data Visualization:** Create effective visualizations to communicate key findings.
+- **Key Objectives:**
+  - **Data Cleaning and Organization:** Prepare the mortality dataset for meaningful analysis.
+  - **Exploration of Trends and Patterns:** Investigate mortality rates by region, age, and time.
+  - **Data Visualization:** Create effective visualizations to communicate key findings.
 
 ---
 

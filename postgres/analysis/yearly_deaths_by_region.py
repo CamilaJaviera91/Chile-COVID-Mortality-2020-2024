@@ -7,9 +7,6 @@ import numpy as np
 # Importing the sys module to manipulate the Python runtime environment
 import sys
 
-# Importing the pandas library to work with structured data (DataFrames)
-import pandas as pd  # Ensure pandas is installed in your environment
-
 # Adding the path to the folder containing the function to be imported
 sys.path.append('./postgres/queries/')
 

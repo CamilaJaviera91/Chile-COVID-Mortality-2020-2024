@@ -135,7 +135,7 @@ Ensure you have the following installed:
 
 <br>
 
-![connection2](./postgres/images/pic2.jpg)
+![connection2](./source/postgres/images/pic2.jpg)
 
 ### 📌 Schema Diagram 
 

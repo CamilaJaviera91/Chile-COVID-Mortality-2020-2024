@@ -9,7 +9,7 @@ import sys
 
 # Adding the path to the folder containing the function to be imported
 # This allows importing a custom module from a specific directory
-sys.path.append('./postgres/queries/')
+sys.path.append('./source/postgres/queries/')
 
 # Importing the 'yearly_deaths_by_gender_and_region' function from a custom module
 # Renaming it as 'gr' for easier use

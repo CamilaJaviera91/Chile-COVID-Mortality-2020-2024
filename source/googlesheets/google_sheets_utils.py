@@ -12,7 +12,7 @@ warnings.filterwarnings('ignore')
 plt.style.use("default")
 
 # Define the folder where the database files are stored
-FOLDER = './googlesheets/database/'
+FOLDER = './source/googlesheets/database/'
 
 # Spreadsheet ID for the Google Sheets file
 # This ID is obtained from the URL of the Google Sheet
@@ -22,7 +22,7 @@ SPREADSHEET_ID = '1Q0p_w4YwXYZFqseHEhs8AH_UoJY4ll8Vl4iryrIbMo8'
 
 # Path to the credentials JSON file required for Google API authentication
 # The credentials file contains information such as client email, private key, etc.
-SERVICE_ACCOUNT_FILE = './googlesheets/ignore/credentials.json'
+SERVICE_ACCOUNT_FILE = './source/googlesheets/ignore/credentials.json'
 
 # Define the required scopes for accessing Google Sheets and Drive APIs
 SCOPES = [

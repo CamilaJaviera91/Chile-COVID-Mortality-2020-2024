@@ -3,11 +3,11 @@ import pandas as pd # For working with data in DataFrame format.
 import os  # For file and directory operations.
 
 # Load the data from the CSV file
-df = pd.read_csv('./googlesheets/database/COVID_CLEAN.csv')
+df = pd.read_csv('./source/googlesheets/database/COVID_CLEAN.csv')
 
-# Group the data by 'PERIODO' (period) and 'RANGO_ETARIO' (Age Range),
+# Group the data by 'PERIODO' (period) and 'SEXO_NOMBRE' (gender),
 # and count the number of occurrences to calculate the deaths
-df_count = df.groupby(['AÑO', 'RANGO_ETARIO']).size().reset_index(name='MUERTES')
+df_count = df.groupby(['PERIODO', 'SEXO_NOMBRE']).size().reset_index(name='MUERTES')
 
 # Create a custom class for the PDF
 class PDF(FPDF):
@@ -15,7 +15,7 @@ class PDF(FPDF):
         # Set the font for the header
         self.set_font('Arial', 'B', 12)
         # Add a title at the top of the page
-        self.cell(0, 10, 'YEARLY DEATHS BY REGION', align='C', ln=True)
+        self.cell(0, 10, 'MONTHLY DEATHS BY GENDER', align='C', ln=True)
         # Add spacing after the header
         self.ln(10)
 
@@ -35,7 +35,7 @@ pdf.set_font('Arial', size=10)
 # Add the table to the PDF
 # Define the width of each column (in mm)
 col_widths = [40, 80, 40]  # Adjusted column widths for better alignment
-header = ['YEAR', 'AGE RANGE', 'DEATHS']  # Define the table headers
+header = ['PERIOD', 'GENDER', 'DEATHS']  # Define the table headers
 
 # Center the table horizontally
 # Calculate the total table width and the starting X position
@@ -51,19 +51,19 @@ pdf.ln()  # Line break after the header
 # Add rows of data to the PDF
 for _, row in df_count.iterrows():
     pdf.set_x(start_x)  # Ensure each row starts at the same X position
-    pdf.cell(col_widths[0], 10, str(row['AÑO']), border=1, align='C')  # Add 'AÑO' data
-    pdf.cell(col_widths[1], 10, str(row['RANGO_ETARIO']), border=1, align='C')  # Add 'RANGO_ETARIO' data
+    pdf.cell(col_widths[0], 10, str(row['PERIODO']), border=1, align='C')  # Add 'PERIODO' data
+    pdf.cell(col_widths[1], 10, str(row['SEXO_NOMBRE']), border=1, align='C')  # Add 'SEXO_NOMBRE' data
     pdf.cell(col_widths[2], 10, str(row['MUERTES']), border=1, align='C')  # Add 'MUERTES' data
     pdf.ln()  # Line break after each row
 
 # Define the folder path to save the PDF
-FOLDER = './googlesheets/download/'  
+FOLDER = './source/googlesheets/download/'  
 
 # Check if the specified folder exists; if not, create it
 if not os.path.exists(FOLDER):
     os.makedirs(FOLDER)
 
 # Save the PDF to the specified folder
-pdf.output(FOLDER + 'yearly_deaths_by_age_range.pdf')
+pdf.output(FOLDER + 'monthly_deaths_by_gender.pdf')
 
-print("PDF successfully created: 'yearly_deaths_by_age_range.pdf'")
+print("PDF successfully created: 'monthly_deaths_by_gender.pdf'")

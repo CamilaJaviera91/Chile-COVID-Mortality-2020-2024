@@ -3,7 +3,7 @@ import pandas as pd # For working with data in DataFrame format.
 import os  # For file and directory operations.
 
 # Load the data from the CSV file
-df = pd.read_csv('./googlesheets/database/COVID_CLEAN.csv')
+df = pd.read_csv('./source/googlesheets/database/COVID_CLEAN.csv')
 
 # Group the data by 'PERIODO' (period) and 'SEXO_NOMBRE' (gender),
 # and count the number of occurrences to calculate the deaths
@@ -57,7 +57,7 @@ for _, row in df_count.iterrows():
     pdf.ln()  # Line break after each row
 
 # Define the folder path to save the PDF
-FOLDER = './googlesheets/download/'  
+FOLDER = './source/googlesheets/download/'  
 
 # Check if the specified folder exists; if not, create it
 if not os.path.exists(FOLDER):

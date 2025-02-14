@@ -1,6 +1,6 @@
 # Import the 'sys' module to modify the Python path for module discovery
 import sys
-sys.path.append('./postgres/queries/')  # Add the path to the 'queries' folder for importing custom modules
+sys.path.append('./source/postgres/queries/')  # Add the path to the 'queries' folder for importing custom modules
 
 # Import the 'connection' function from the custom 'connection' file
 from connection import connection

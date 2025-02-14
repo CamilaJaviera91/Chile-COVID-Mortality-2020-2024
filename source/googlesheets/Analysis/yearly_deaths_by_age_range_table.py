@@ -57,7 +57,7 @@ for _, row in df_count.iterrows():
     pdf.ln()  # Line break after each row
 
 # Define the folder path to save the PDF
-FOLDER = './googlesheets/download/'  
+FOLDER = './source/googlesheets/download/'  
 
 # Check if the specified folder exists; if not, create it
 if not os.path.exists(FOLDER):

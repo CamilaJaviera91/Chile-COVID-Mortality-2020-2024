@@ -186,6 +186,10 @@ order by "year";
 
 ![analysis2](./postgres/images/pic5.png)
 
+### Yearly Deaths by Region (Graphic)
+
+![analysis3](./postgres/images/pic6.png)
+
 ---
 
 ## 🎖️ Acknowledgments

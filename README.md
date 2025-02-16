@@ -130,7 +130,7 @@ Ensure you have the following installed:
 
 ## Connection
 
-1. In this case, we are going to use DBeaver, so the first thing we need to do is create a new connection.
+1. In this case, we are going to use **DBeaver**, so the first thing we need to do is create a new connection.
 - As shown in the picture, we need to configure the following settings:
     - **<u>Host</u>:** localhost
     - **<u>Database</u>:** postgres

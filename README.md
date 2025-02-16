@@ -31,7 +31,7 @@ The project leverages **Python** for data processing and analysis and **Google S
 
 ## 🎯 Key objectives
 
-- Cleaning and organizing the mortality dataset for meaningful analysis.
+- **Cleaning** and **organizing** the mortality dataset for meaningful analysis.
 - Exploring trends and patterns, such as mortality rates by region, age, or time.
 - Visualizing data to communicate insights effectively.
 - Building reproducible workflows for data analysis and reporting.

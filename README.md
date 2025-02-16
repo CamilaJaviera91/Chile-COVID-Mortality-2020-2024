@@ -6,13 +6,13 @@
     - Analyze COVID-19 mortality data in Chile from 2020 to 2024, providing critical insights into the pandemic's impact on the population. 
 
 - **Project Division:**
-  - **First Part:** Work with Google Sheets for initial data exploration and analysis.
-  - **Second Part:** Use PostgreSQL for advanced analysis and data storage.
+  - **First Part:** Work with **Google Sheets** for initial data exploration and analysis.
+  - **Second Part:** Use **PostgreSQL** for advanced analysis and data storage.
 
 - **Methodology:**
 
   - **Google Sheets:**
-    - Use Python for data processing and analysis.
+    - Use **Python** for data processing and analysis.
     - Collaboratively explore data using Google Sheets.
 
   - **PostgreSQL:**

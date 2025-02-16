@@ -25,7 +25,7 @@
 
 ---
 
-# 📋 Google Sheets
+# 📋 Google Sheetsgit chec
 
 The project leverages **Python** for data processing and analysis and **Google Sheets** for collaborative data exploration.
 

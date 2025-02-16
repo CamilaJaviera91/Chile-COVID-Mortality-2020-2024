@@ -13,10 +13,10 @@
 
   - **Google Sheets:**
     - Use **Python** for data processing and analysis.
-    - Collaboratively explore data using Google Sheets.
+    - Collaboratively explore data using **Google Sheets**. 
 
   - **PostgreSQL:**
-    - Migrate data to a PostgreSQL database for more detailed analysis and advanced queries.
+    - Migrate data to a '*PostgreSQL** database for more detailed analysis and advanced queries.
 
 - **Key Objectives:**
   - **Data Cleaning and Organization:** Prepare the mortality dataset for meaningful analysis.

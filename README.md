@@ -3,7 +3,7 @@
 ### 📃 Project Description
 
 - **Objective:** 
-    - Analyze COVID-19 mortality data in Chile from 2020 to 2024, providing critical insights into the pandemic's impact on the population. 
+    - Analyze **COVID-19 mortality data in Chile from 2020 to 2024**, providing critical insights into the pandemic's impact on the population. 
 
 - **Project Division:**
   - **First Part:** Work with **Google Sheets** for initial data exploration and analysis.

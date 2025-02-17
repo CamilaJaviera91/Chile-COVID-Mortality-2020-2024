@@ -3,20 +3,20 @@
 ### 📃 Project Description
 
 - **Objective:** 
-    - Analyze COVID-19 mortality data in Chile from 2020 to 2024, providing critical insights into the pandemic's impact on the population. 
+    - Analyze **COVID-19 mortality data in Chile from 2020 to 2024**, providing critical insights into the pandemic's impact on the population. 
 
 - **Project Division:**
-  - **First Part:** Work with Google Sheets for initial data exploration and analysis.
-  - **Second Part:** Use PostgreSQL for advanced analysis and data storage.
+  - **First Part:** Work with **Google Sheets** for initial data exploration and analysis.
+  - **Second Part:** Use **PostgreSQL** for advanced analysis and data storage.
 
 - **Methodology:**
 
   - **Google Sheets:**
-    - Use Python for data processing and analysis.
-    - Collaboratively explore data using Google Sheets.
+    - Use **Python** for data processing and analysis.
+    - Collaboratively explore data using **Google Sheets**. 
 
   - **PostgreSQL:**
-    - Migrate data to a PostgreSQL database for more detailed analysis and advanced queries.
+    - Migrate data to a **PostgreSQL** database for more detailed analysis and advanced queries.
 
 - **Key Objectives:**
   - **Data Cleaning and Organization:** Prepare the mortality dataset for meaningful analysis.
@@ -130,7 +130,7 @@ Ensure you have the following installed:
 
 ## Connection
 
-1. In this case, we are going to use DBeaver, so the first thing we need to do is create a new connection.
+1. In this case, we are going to use **DBeaver**, so the first thing we need to do is create a new connection.
 - As shown in the picture, we need to configure the following settings:
     - **<u>Host</u>:** localhost
     - **<u>Database</u>:** postgres
